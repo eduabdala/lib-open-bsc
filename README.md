@@ -1,4 +1,4 @@
-# tool-fw-sdk
+# lib-open-bsc
 
 This document explains how to build and install lib-open-bsc on Linux and Windows using the provided toolchains.
 
@@ -51,3 +51,4 @@ After installation, you will have:
 ```
 bin/MediumTerminal.exe
 ```
+
