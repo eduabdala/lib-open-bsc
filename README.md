@@ -17,12 +17,12 @@ mkdir -p build/linux/release
 cd build/linux/release
 cmake ../../../ -DCMAKE_BUILD_TYPE=Release
 cmake --build .
+cd ../../../
 ```
 
 ## Building for Windows (MinGW)
 
 ```bash
-cd C:/Azure/tool-fw-sdk
 cmake \
     -S . \
     -B build/windows/release \

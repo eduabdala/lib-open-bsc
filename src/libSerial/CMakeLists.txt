@@ -1,6 +1,7 @@
 add_library(Serial SHARED
     libSerial.cpp
     PortManager.cpp
+    PortManagerWindows.cpp
     Serial.cpp
 )
 

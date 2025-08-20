@@ -17,6 +17,6 @@ target_compile_definitions(OpenBSC PRIVATE EVENT_LOGGER_EXPORTS)
 
 install(TARGETS OpenBSC
     RUNTIME   DESTINATION bin
-    LIBRARY   DESTINATION bin
+    LIBRARY   DESTINATION lib
     ARCHIVE   DESTINATION lib
 )

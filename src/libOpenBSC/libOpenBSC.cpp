@@ -13,7 +13,7 @@ extern "C"
     {
         ComPortList_s list = {0};
 
-        auto           ports        = FindSerialPorts(VID, PID);
+        auto           ports        = FindPorts(VID, PID);
         const uint32_t COM_MAX_SIZE = sizeof(list.ComPort) / sizeof(list.ComPort[0]);
         uint32_t       count        = std::min(static_cast<uint32_t>(ports.size()), COM_MAX_SIZE);
 

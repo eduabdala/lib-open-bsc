@@ -115,6 +115,8 @@ size_t SerialCommunication::Write(const void* buffer, size_t length)
         throw std::runtime_error("Write failed");
     if (static_cast<size_t>(written) != length)
         throw std::runtime_error("Incomplete write");
+    
+    return static_cast<size_t>(written);
 #endif
 }
 

@@ -12,6 +12,6 @@
  * 
  * @return Vector of serial port names as strings.
  */
-std::vector<std::string> FindSerialPorts(uint16_t VID, uint16_t PID);
+std::vector<std::string> FindPorts(uint16_t VID, uint16_t PID);
 
 #endif // PORT_MANAGER_HPP

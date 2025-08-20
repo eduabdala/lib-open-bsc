@@ -1,24 +1,24 @@
 {
     "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#f4b3b6",
-        "activityBar.background": "#f4b3b6",
+        "activityBar.activeBackground": "#f0ffe7",
+        "activityBar.background": "#f0ffe7",
         "activityBar.foreground": "#15202b",
         "activityBar.inactiveForeground": "#15202b99",
-        "activityBarBadge.background": "#1a8b14",
-        "activityBarBadge.foreground": "#e7e7e7",
+        "activityBarBadge.background": "#80afff",
+        "activityBarBadge.foreground": "#15202b",
         "commandCenter.border": "#15202b99",
-        "sash.hoverBorder": "#f4b3b6",
-        "statusBar.background": "#ed878b",
+        "sash.hoverBorder": "#f0ffe7",
+        "statusBar.background": "#cfffb4",
         "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#e65b60",
-        "statusBarItem.remoteBackground": "#ed878b",
+        "statusBarItem.hoverBackground": "#aeff81",
+        "statusBarItem.remoteBackground": "#cfffb4",
         "statusBarItem.remoteForeground": "#15202b",
-        "titleBar.activeBackground": "#ed878b",
+        "titleBar.activeBackground": "#cfffb4",
         "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveBackground": "#ed878b99",
+        "titleBar.inactiveBackground": "#cfffb499",
         "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#ed878b",
+    "peacock.color": "#CFFFB4",
     "files.associations": {
         "algorithm": "cpp",
         "any": "cpp",
@@ -92,5 +92,6 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "random": "cpp"
-    }
+    },
+    "idf.pythonInstallPath": "/usr/bin/python3"
 }

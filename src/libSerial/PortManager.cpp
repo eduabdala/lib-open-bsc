@@ -11,9 +11,11 @@
 
 /**
  * @brief Lists available serial ports on Windows using SetupAPI
+ * @param vid Vendor ID (optional filter, 0 = ignore)
+ * @param pid Product ID (optional filter, 0 = ignore)
  * @return Vector of port names (e.g., "COM1", "COM3")
  */
-std::vector<std::string> FindSerialPorts()
+std::vector<std::string> FindPorts(unsigned short vid, unsigned short pid)
 {
     std::vector<std::string> ports;
 
@@ -36,6 +38,7 @@ std::vector<std::string> FindSerialPorts()
         {
             if (type == REG_SZ)
             {
+                // Aqui poderia aplicar filtro por VID/PID (não implementado ainda)
                 ports.emplace_back(portName);
             }
         }
@@ -53,9 +56,11 @@ std::vector<std::string> FindSerialPorts()
 
 /**
  * @brief Lists available serial ports on Linux by scanning /dev
+ * @param vid Vendor ID (optional filter, 0 = ignore)
+ * @param pid Product ID (optional filter, 0 = ignore)
  * @return Vector of port names (e.g., "/dev/ttyS0", "/dev/ttyUSB0")
  */
-std::vector<std::string> FindSerialPorts()
+std::vector<std::string> FindPorts(unsigned short vid, unsigned short pid)
 {
     std::vector<std::string> ports;
 
@@ -72,6 +77,8 @@ std::vector<std::string> FindSerialPorts()
         std::string name(entry->d_name);
         if (std::regex_match(name, serialRegex))
         {
+            // Filtro por VID/PID ainda não implementado (para isso precisaria
+            // parsear /sys/class/tty/... e verificar os atributos USB).
             ports.emplace_back(std::string(devDir) + name);
         }
     }

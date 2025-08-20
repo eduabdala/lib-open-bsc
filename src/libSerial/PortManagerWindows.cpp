@@ -1,6 +1,5 @@
 /**
  * @file PortManager.cpp
- * @author Mairon Schneider Cardoso (mairon.cardoso_irede@perto.com.br)
  * @brief Source file for Port Manager (Windows and Linux)
  * @version 0.2
  * @date 2025-08-09
