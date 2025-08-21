@@ -6,6 +6,9 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Build](https://img.shields.io/badge/build-unavailable-red)
+![Open Issues](https://img.shields.io/github/issues/eduabdala/lib-open-bsc)
+![C++](https://img.shields.io/badge/C++-17.0-blue)
+![CMake](https://img.shields.io/badge/CMake-3.15-blue)
 
 ---
 
@@ -47,7 +50,7 @@ cd ../../../
 
 ---
 
-## Building for Windows (MinGW)
+## Building for Windows
 
 ```bash
 cmake \
@@ -93,3 +96,4 @@ bin/MediumTerminal.exe
 <!-- Personal Notes -->
 
 > Always keep the README updated, especially badges, version, and project status.
+
