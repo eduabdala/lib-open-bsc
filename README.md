@@ -1,6 +1,29 @@
 # lib-open-bsc
 
-This document explains how to build and install lib-open-bsc on Linux and Windows using the provided toolchains.
+<!-- Badges -->
+
+![Project Status](https://img.shields.io/badge/status-in%20development-yellow)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Build](https://img.shields.io/badge/build-unavailable-red)
+
+---
+
+## Description
+
+This project provides **lib-open-bsc**, a library with build and install instructions for Linux and Windows using the provided toolchains.
+
+---
+
+## Table of Contents
+
+* [Prerequisites](#prerequisites)
+* [Building for Linux](#building-for-linux)
+* [Building for Windows](#building-for-windows)
+* [Installing Artifacts](#installing-artifacts)
+* [Contact](#contact)
+
+---
 
 ## Prerequisites
 
@@ -9,6 +32,8 @@ This document explains how to build and install lib-open-bsc on Linux and Window
 
   * Linux: GCC or Clang
   * Windows: MinGW (via MSYS2/MinGW64)
+
+---
 
 ## Building for Linux
 
@@ -19,6 +44,8 @@ cmake ../../../ -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 cd ../../../
 ```
+
+---
 
 ## Building for Windows (MinGW)
 
@@ -32,9 +59,11 @@ cmake \
 cmake --build build/windows/release -- -j
 ```
 
+---
+
 ## Installing Artifacts
 
-To copy the executable (Linux) and the DLL (Windows) to the project's `bin` directory, run:
+To copy the executable (Linux) and DLL (Windows) to the project's `bin` directory, run:
 
 ```bash
 # Linux
@@ -52,3 +81,15 @@ After installation, you will have:
 bin/MediumTerminal.exe
 ```
 
+---
+
+## Contact
+
+* GitHub: [username](https://github.com/eduabdala)
+* Email: [eduardoabdala9@outlook.com](eduardoabdala9@outlook.com)
+
+---
+
+<!-- Personal Notes -->
+
+> Always keep the README updated, especially badges, version, and project status.
