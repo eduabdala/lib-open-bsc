@@ -8,7 +8,12 @@ static OpenBSC sdk;
 
 extern "C"
 {
-
+    /**
+     * @brief Lists available COM ports filtered by VID and PID.
+     * @param VID USB Vendor ID (default: 0)
+     * @param PID USB Product ID (default: 0)
+     * @return ComPortList_s containing serial numbers and names of available ports.
+     */
     BSC_SDK_EXPORT ComPortList_s listPortSDK(uint16_t VID = 0, uint16_t PID = 0)
     {
         ComPortList_s list = {0};
@@ -38,8 +43,19 @@ extern "C"
         return list;
     }
 
+    /**
+     * @brief Initializes the OpenBSC SDK with specified serial port parameters.
+     * @param comSerial COM port to open
+     * @param baudRate Baud rate for serial communication
+     * @param byte_size Number of data bits
+     * @param stop_bits Number of stop bits
+     * @param parity Parity ('N', 'E', 'O')
+     * @param use_rts Enable RTS
+     * @param use_dtr Enable DTR
+     * @return errorList_e indicating success or type of failure
+     */
     BSC_SDK_EXPORT enum errorList_e OpenBSCSDKInit(const char *comSerial, uint32_t baudRate, uint8_t byte_size, uint8_t stop_bits, char parity,
-                                                         bool use_rts, bool use_dtr)
+                                                   bool use_rts, bool use_dtr)
     {
         if (!comSerial || comSerial[0] == '\0')
         {
@@ -54,6 +70,11 @@ extern "C"
         return NONE;
     }
 
+    /**
+     * @brief Opens the specified COM port using the SDK.
+     * @param comSerial COM port to open
+     * @return errorList_e indicating success or type of failure
+     */
     BSC_SDK_EXPORT enum errorList_e OpenBSCSDKOpen(const char *comSerial)
     {
         if (!comSerial || comSerial[0] == '\0')
@@ -86,11 +107,19 @@ extern "C"
         return NONE;
     }
 
+    /**
+     * @brief Closes the SDK connection and disconnects from the device.
+     */
     BSC_SDK_EXPORT void OpenBSCSDKClose(void)
     {
         sdk.Disconnect();
     }
 
+    /**
+     * @brief Sends a command to the connected device and reads the response.
+     * @param cmd Command string to send
+     * @return CommandOutcome_s containing the response and error code
+     */
     BSC_SDK_EXPORT struct CommandOutcome_s OpenBSCSDKSend(const char *cmd)
     {
         CommandOutcome_s resp{};

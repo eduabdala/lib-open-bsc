@@ -62,12 +62,16 @@ class OpenBSC
 
     /**
      * @brief Reads the response from the connected device.
-     * @param[out] buffer: The buffer to store the received data.
-     * @param[out] length: The maximum number of bytes to read.
-     * @param[in]  filtered: If true, filters the data using OpenBSC protocol (removes STX/ETX/BCC).
-     * @return The number of bytes actually read.
+     * 
+     * Reads bytes from the serial port and extracts the payload according to the OpenBSC protocol.
+     * If `filtered` is true, the STX, ETX, and BCC bytes are removed and only the payload is returned.
+     * 
+     * @param[out] buffer The buffer to store the received payload.
+     * @param[in] maxLength Maximum number of bytes that can be stored in buffer.
+     * @param[in] timeout_ms Timeout in milliseconds to wait for the response.
+     * @return uint32_t Number of bytes successfully read into buffer. Returns 0 if timeout occurs or BCC is invalid.
      */
-    uint32_t ReadResponse(char* buffer, uint32_t length, bool filtered);
+    uint32_t ReadResponse(char* buffer, uint32_t maxLength, uint32_t timeout_ms);
 
     /**
      * @brief Disconnects the serial communication.
